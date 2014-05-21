@@ -8,7 +8,9 @@ import org.apache.mahout.cf.taste.impl.recommender.{GenericItemBasedRecommender,
 import scala.collection.JavaConversions._
 
 object MovieLens4Done extends App {
-  val model = new FileDataModel(new File("/Users/adamw/projects/mahout-pres/ml-100k/ua.base"))
+  val model = new FileDataModel(
+    new File("/Users/adamw/projects/mahout-pres/ml-100k/ua.base"))
+
   val itemSimilarity = new PearsonCorrelationSimilarity(model)
   val recommender = new GenericItemBasedRecommender(model, itemSimilarity)
 

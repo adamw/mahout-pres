@@ -9,7 +9,8 @@ import scala.collection.JavaConversions._
 import org.apache.mahout.cf.taste.impl.model.{GenericUserPreferenceArray, PlusAnonymousConcurrentUserDataModel}
 
 object MovieLens3Done extends App {
-  val baseModel = new FileDataModel(new File("/Users/adamw/projects/mahout-pres/ml-100k/ua.base"))
+  val baseModel = new FileDataModel(
+    new File("/Users/adamw/projects/mahout-pres/ml-100k/ua.base"))
   val model = new PlusAnonymousConcurrentUserDataModel(baseModel, 10)
 
   val userSimilarity = new PearsonCorrelationSimilarity(model)

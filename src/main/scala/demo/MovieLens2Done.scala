@@ -18,7 +18,8 @@ object MovieLens2Done extends App {
     }
   }
 
-  val model = new FileDataModel(new File("/Users/adamw/projects/mahout-pres/ml-100k/ua.base"))
+  val model = new FileDataModel(
+    new File("/Users/adamw/projects/mahout-pres/ml-100k/ua.base"))
 
   val evaluator1 = new AverageAbsoluteDifferenceRecommenderEvaluator()
   val score1 = evaluator1.evaluate(builder, null, model, 0.9, 1.0)
