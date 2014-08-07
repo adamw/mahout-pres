@@ -1,10 +1,11 @@
-package demo
+package demo.mahout
+
+import java.io.File
 
 import org.apache.mahout.cf.taste.impl.model.file.FileDataModel
-import java.io.File
+import org.apache.mahout.cf.taste.impl.recommender.GenericItemBasedRecommender
 import org.apache.mahout.cf.taste.impl.similarity.PearsonCorrelationSimilarity
-import org.apache.mahout.cf.taste.impl.neighborhood.NearestNUserNeighborhood
-import org.apache.mahout.cf.taste.impl.recommender.{GenericItemBasedRecommender, GenericUserBasedRecommender}
+
 import scala.collection.JavaConversions._
 
 object MovieLens4Done extends App {

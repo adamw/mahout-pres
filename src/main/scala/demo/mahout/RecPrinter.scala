@@ -1,5 +1,6 @@
-package demo
+package demo.mahout
 
+import demo.MovieDB
 import org.apache.mahout.cf.taste.recommender.RecommendedItem
 
 object RecPrinter {

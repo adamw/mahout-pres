@@ -1,12 +1,13 @@
-package demo
+package demo.mahout
 
-import org.apache.mahout.cf.taste.impl.model.file.FileDataModel
 import java.io.File
-import org.apache.mahout.cf.taste.impl.similarity.PearsonCorrelationSimilarity
+
+import org.apache.mahout.cf.taste.eval.RecommenderBuilder
+import org.apache.mahout.cf.taste.impl.eval.AverageAbsoluteDifferenceRecommenderEvaluator
+import org.apache.mahout.cf.taste.impl.model.file.FileDataModel
 import org.apache.mahout.cf.taste.impl.neighborhood.NearestNUserNeighborhood
 import org.apache.mahout.cf.taste.impl.recommender.GenericUserBasedRecommender
-import org.apache.mahout.cf.taste.impl.eval.AverageAbsoluteDifferenceRecommenderEvaluator
-import org.apache.mahout.cf.taste.eval.RecommenderBuilder
+import org.apache.mahout.cf.taste.impl.similarity.PearsonCorrelationSimilarity
 import org.apache.mahout.cf.taste.model.DataModel
 
 object MovieLens2Done extends App {
